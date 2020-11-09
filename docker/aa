@@ -1,7 +1,0 @@
-
-# Build image
-./docker-debian.sh
-
-# Run image
-docker run -it --rm -p 1880:1880 -v node_red_data:/data testing:node-red-build bash
-

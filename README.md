@@ -16,9 +16,6 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 - Halloween fun for your whole family!
 - Rickroll you office buddies
 
-docker run -it --rm -p 1880:1880 -v node_red_data:/data --privileged --network host testing:node-red-build bash
-
-
 ## Core technologies
 
 - Software: https://nodered.org is used as main "smart home" solution, mdns is used as discovery mechanism and Docker is used as defined runtime.
@@ -26,17 +23,17 @@ docker run -it --rm -p 1880:1880 -v node_red_data:/data --privileged --network h
 
 # DIY
 
-## custom node red docker image
+## custom node-red Docker image
 
-- see https://github.com/node-red/node-red-docker/tree/master/docker-custom
-- add needed packages build image, don't forget to set the correct tag!
+- Source is https://github.com/node-red/node-red-docker/tree/master/docker-custom
+- see `docker` directory to create a modified docker image
 
-## needed packages
+## Test on OSX
 
-- node-red-node-wol
-- node-red-dashboard
-- node-red-contrib-gpio
-- node-red-contrib-huemagic
-- node-red-contrib-sonos-plus
-- node-red-contrib-alexa-smart-home
-- node-red-contrib-homekit-bridged
+- build `./docker-debian.sh`
+- run `docker run -it --rm -p 1880:1880 -v node_red_data:/data --privileged testing:node-red-build` (and remember --network host does not work on OSX!)
+
+## Test on RPI
+
+- build `tbd`
+- run `tbd`
