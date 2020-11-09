@@ -1,7 +1,7 @@
 # Singfrid
 
 Singfrid is a node based smart home solution using existing technologies. Singfrids main goals are:
-- reuse your old/obsolete single board computers
+- reuse your old/obsolete single board computers (SBC)
 - make something fun and/or useful
 - easy and fast setup process
 
@@ -19,9 +19,11 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 ## Core technologies
 
 - Software: https://nodered.org is used as main "smart home" solution, mdns is used as discovery mechanism and Docker is used as defined runtime.
-- Hardware: Any single board computer (SBC) that runs Node.js - how many unused SBC are lying around in your office?
+- Hardware: Any single board computer that runs Node.js - how many unused SBCs are lying around in your office?
 
-# DIY
+# Docker runtime
+
+Singfrid uses Docker as runtime to simplify deploying.
 
 ## custom node-red Docker image
 
@@ -30,10 +32,11 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 
 ## Test on OSX
 
-- build `./docker-debian.sh`
-- run `docker run -it --rm -p 1880:1880 -v node_red_data:/data --privileged testing:node-red-build` (and remember --network host does not work on OSX!)
+- build `./docker-debian-amd64.sh`
+- run `docker run -it --rm -p 1880:1880 -v node_red_data:/data testing:node-red-build` (and remember --network host does not work on OSX!)
 
 ## Test on RPI
 
-- build `tbd`
+- build `./docker-debian-arm.sh`
 - run `tbd`
+- run `docker run -it --rm -p 1880:1880 -v node_red_data:/data --privileged testing:node-red-build` (and remember --network host does not work on OSX!)
