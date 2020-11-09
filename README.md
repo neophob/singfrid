@@ -21,6 +21,12 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 - Software: https://nodered.org is used as main "smart home" solution, mdns is used as discovery mechanism and Docker is used as defined runtime.
 - Hardware: Any single board computer that runs Node.js - how many unused SBCs are lying around in your office?
 
+# Repo
+
+- `docs`: output for the singfrid.com website
+- `smarthome`: docker source, default node-red configuration, default flows
+- `website`: source for the singfrid.com website, output is copied to the `docs` directory
+
 # Docker runtime
 
 Singfrid uses Docker as runtime to simplify deploying.
