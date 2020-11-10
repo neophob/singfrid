@@ -35,7 +35,7 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 
 Singfrid uses Docker as runtime to simplify deploying.
 
-## custom node-red Docker image
+## Custom node-red Docker image
 
 - Source is https://github.com/node-red/node-red-docker/tree/master/docker-custom
 - see `smarthome` directory to create a modified docker image
@@ -49,4 +49,4 @@ Singfrid uses Docker as runtime to simplify deploying.
 
 - make sure docker is installed. If not check out https://docs.docker.com/engine/install/debian/
 - build `cd smarthome` then `./docker-debian-arm.sh`
-- run `docker run -it --rm -v node_red_data:/data --network host --privileged singfrid:v1` (and remember --network host does not work on OSX!)
+- run `docker run -it --rm -v node_red_data:/data --network host --privileged singfrid:v1`
