@@ -3,7 +3,10 @@ ARG NODE_VERSION=12
 ARG OS=buster-slim
 
 #### Stage BASE ########################################################################################################
-FROM ${ARCH}/node:${NODE_VERSION}-${OS} AS base
+#including ARCH leads to issues on the RPI:
+#Error response from daemon: pull access denied for armv7l/node, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+#FROM ${ARCH}/node:${NODE_VERSION}-${OS} AS base
+FROM node:${NODE_VERSION}-${OS} AS base
 
 # Copy scripts
 COPY scripts/*.sh /tmp/
@@ -24,7 +27,7 @@ RUN set -ex && \
     deluser --remove-home node && \
     # adduser --home /usr/src/node-red --disabled-password --no-create-home node-red --uid 1000 && \
     useradd --home-dir /usr/src/node-red --uid 1000 node-red && \
-    chown -R node-red:root /data && chmod -R g+rwX /data && \ 
+    chown -R node-red:root /data && chmod -R g+rwX /data && \
     chown -R node-red:root /usr/src/node-red && chmod -R g+rwX /usr/src/node-red
     # chown -R node-red:node-red /data && \
     # chown -R node-red:node-red /usr/src/node-red

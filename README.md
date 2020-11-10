@@ -11,7 +11,10 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 
 - If someone opens your fridge, an angel sound is played on your kitchen Sonos
 - If someone opens a window you hear birds singing in you living room Sonos
+- Validate Humidity in your basement
 - If you enter the toilet, play "Jaws" soundtrack
+- Use RFID cards to select different audio books on your Sonos
+- Automatically dim you lights when you start the Netflix application on your TV (and the TV supports cast v2)
 - If the door opens at night and the Hue light in the kitchen is off, dim the kitchen light to 15%, wait 10 minutes and then power off
 - Halloween fun for your whole family!
 - Rickroll your office buddies
@@ -40,10 +43,10 @@ Singfrid uses Docker as runtime to simplify deploying.
 ## Test on OSX
 
 - build `./docker-debian-amd64.sh`
-- run `docker run -it --rm -p 1880:1880 -v node_red_data:/data testing:node-red-build` (and remember --network host does not work on OSX!)
+- run `docker run -it --rm -p 1880:1880 -v node_red_data:/data singfrid:v1` (and remember --network host does not work on OSX!)
 
 ## Test on RPI
 
 - build `./docker-debian-arm.sh`
 - run `tbd`
-- run `docker run -it --rm -p 1880:1880 -v node_red_data:/data --privileged testing:node-red-build` (and remember --network host does not work on OSX!)
+- run `docker run -it --rm -v node_red_data:/data --network host --privileged singfrid:v1` (and remember --network host does not work on OSX!)
