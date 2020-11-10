@@ -48,5 +48,4 @@ Singfrid uses Docker as runtime to simplify deploying.
 ## Test on RPI
 
 - build `./docker-debian-arm.sh`
-- run `tbd`
 - run `docker run -it --rm -v node_red_data:/data --network host --privileged singfrid:v1` (and remember --network host does not work on OSX!)
