@@ -1,11 +1,11 @@
 # Singfrid
 
-Singfrid is a node based smart home solution using existing technologies. Singfrids main goals are:
-- reuse your old/obsolete single board computers (SBC)
-- make something fun and/or useful
-- easy and fast setup process
+Singfrid is a node based smart home solution using existing technologies. Singfrid's main goals are:
+- 🚀 Simple and intuitive user interface (setup and operation)
+- 🥇 Add instant value to your home/office
+- ♻️ Reuse your old/obsolete single board computers (SBC)
 
-Compared to existing solutions, which either rely on cloud computing or run on a central (local) controller, a Singfrid node can run whenever it is needed. It can be online or offline, it can run on old or on new hardware.
+Compared to existing solutions, which either rely on cloud computing or run on a central (local) controller, a Singfrid node can run wherever it is needed. Singfrid can run in a online or offline environment, Singfrid can run on old or new hardware.
 
 ## Example use cases
 
@@ -14,7 +14,8 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 - If you enter the toilet, play "Jaws" soundtrack
 - If the door opens at night and the Hue light in the kitchen is off, dim the kitchen light to 15%, wait 10 minutes and then power off
 - Halloween fun for your whole family!
-- Rickroll you office buddies
+- Rickroll your office buddies
+- Send MQTT events to your MQTT server to aggregate all actions in your home
 
 ## Core technologies
 
