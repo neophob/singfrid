@@ -47,5 +47,6 @@ Singfrid uses Docker as runtime to simplify deploying.
 
 ## Test on RPI
 
+- make sure docker is installed. If not check out https://docs.docker.com/engine/install/debian/
 - build `cd smarthome` then `./docker-debian-arm.sh`
 - run `docker run -it --rm -v node_red_data:/data --network host --privileged singfrid:v1` (and remember --network host does not work on OSX!)
