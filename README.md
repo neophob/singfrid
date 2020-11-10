@@ -38,14 +38,14 @@ Singfrid uses Docker as runtime to simplify deploying.
 ## custom node-red Docker image
 
 - Source is https://github.com/node-red/node-red-docker/tree/master/docker-custom
-- see `docker` directory to create a modified docker image
+- see `smarthome` directory to create a modified docker image
 
 ## Test on OSX
 
-- build `./docker-debian-amd64.sh`
+- build `cd smarthome` then `./docker-debian-amd64.sh`
 - run `docker run -it --rm -p 1880:1880 -v node_red_data:/data singfrid:v1` (and remember --network host does not work on OSX!)
 
 ## Test on RPI
 
-- build `./docker-debian-arm.sh`
+- build `cd smarthome` then `./docker-debian-arm.sh`
 - run `docker run -it --rm -v node_red_data:/data --network host --privileged singfrid:v1` (and remember --network host does not work on OSX!)
