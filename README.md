@@ -19,6 +19,7 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 - Halloween fun for your whole family!
 - Rickroll your office buddies
 - Send MQTT events to your MQTT server to aggregate all actions in your home
+- Measure if the Wash Machine is still running and reflect the state (running / not) in a Dashboard
 
 ## Core technologies
 
@@ -50,3 +51,9 @@ Singfrid uses Docker as runtime to simplify deploying.
 - make sure docker is installed. If not check out https://docs.docker.com/engine/install/debian/
 - build `cd smarthome` then `./docker-debian-arm.sh`
 - run `docker run -it --rm -v node_red_data:/data --network host --privileged singfrid:v1`
+
+# TODO
+
+- clean multiarch docker images (docker buildx)
+- check if https://tasmota.github.io/docs/ESP32/ could/should be integrated (MQTT communication)
+- build custom rpi image? OR script to validate if current configuration works (SPI as example?), docker is installed correctly...
