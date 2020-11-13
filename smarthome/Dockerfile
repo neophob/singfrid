@@ -28,6 +28,7 @@ WORKDIR /usr/src/node-red
 
 # package.json contains Node-RED NPM module and node dependencies
 COPY package.json .
+COPY start.sh .
 COPY flows.json /data
 
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production && \
@@ -47,4 +48,4 @@ ENV NODE_RED_VERSION=1.2.2 \
 # Expose the listening port of node-red
 EXPOSE 1880
 
-ENTRYPOINT ["npm", "start", "--cache", "/data/.npm", "--", "--userDir", "/data"]
+ENTRYPOINT ["./start.sh"]

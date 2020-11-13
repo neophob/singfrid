@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "*** MAKE SURE that the docker cli has a logged in user"
-echo "*** MAKE SURE docker cli knows about buildx! - else enable experimental mode or update client"
+echo "*** MAKE SURE docker cli knows about buildx! - else enable experimental mode or update docker client"
 
 echo "---"
 echo " - make sure Docker buildx builder works..."
