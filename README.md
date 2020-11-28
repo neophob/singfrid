@@ -55,8 +55,7 @@ Singfrid uses Docker as runtime to simplify deploying.
 - run `docker-build.sh` to generate a new, multiarch Docker image AND push it to docker hub.
 
 # TODO
-
-- clean multiarch docker images (docker buildx)
+- autostart docker image after reboot
+- build custom rpi image (is there a lean docker distro available for the rpi?)? OR script to validate if current configuration works (SPI as example?), docker is installed correctly...
 - check if https://tasmota.github.io/docs/ESP32/ could/should be integrated (MQTT communication)
-- build custom rpi image? OR script to validate if current configuration works (SPI as example?), docker is installed correctly...
 - Write down and test how multiple nodes communicate together (protocol, discovery etc)
