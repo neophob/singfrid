@@ -56,6 +56,7 @@ Singfrid uses Docker as runtime to simplify deploying.
 
 # TODO
 - autostart docker image after reboot
+- node-red needs to autostart the singfrid bonjour anouncement - today this needs to be triggered manually
 - build custom rpi image (is there a lean docker distro available for the rpi?)? OR script to validate if current configuration works (SPI as example?), docker is installed correctly...
 - check if https://tasmota.github.io/docs/ESP32/ could/should be integrated (MQTT communication)
 - Write down and test how multiple nodes communicate together (protocol, discovery etc)
