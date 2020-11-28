@@ -30,7 +30,7 @@ Compared to existing solutions, which either rely on cloud computing or run on a
 
 - make sure docker is installed. If not check out https://docs.docker.com/engine/install/debian/
 - Currently the RPI host OS needs to have avahi and dbus running - which is mapped inside the docker image. This is needed for node discovery
-- run `docker run -it --rm -v node_red_data:/data -v /var/run/avahi-daemon:/var/run/avahi-daemon -v /var/run/dbus:/var/run/dbus --network host --privileged singfrid/smarthome:latest`
+- execute `docker run -it --rm -v node_red_data:/data -v /var/run/avahi-daemon:/var/run/avahi-daemon -v /var/run/dbus:/var/run/dbus -v /lib/modules/:/lib/modules/ --network host --privileged singfrid/smarthome:latest`
 
 ## Run on OSX
 
